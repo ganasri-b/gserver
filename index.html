@@ -5,40 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Study Notes</title>
   <style>
-    /* Reset some default styles */
-    * {
-      box-sizing: border-box;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: #fff;
       margin: 0;
-      padding: 0;
-      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      background: #1e1e2f;
+      color: #eee;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding-top: 50px;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
     .container {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      padding: 40px 50px;
-      max-width: 600px;
-      width: 90%;
+      background: #2a2a3d;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      max-width: 650px;
+      width: 100%;
+      padding: 40px 30px;
     }
     h1 {
       font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
+      font-size: 2.8rem;
       text-align: center;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      letter-spacing: 3px;
+      color: #f8f8f8;
+      text-shadow: 0 0 8px #ff6f61;
     }
     ul {
       list-style: none;
@@ -46,36 +40,87 @@
       margin: 0;
     }
     li {
-      background: rgba(255, 255, 255, 0.15);
-      margin-bottom: 15px;
-      border-radius: 10px;
-      transition: background 0.3s ease;
-      padding: 15px 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: #3b3b54;
+      margin-bottom: 18px;
+      border-radius: 15px;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     }
     li:hover {
-      background: rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-    }
-    a {
+      background: #ff6f61;
       color: #fff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      display: block;
+      transform: translateX(8px);
+      box-shadow: 0 6px 20px rgba(255,111,97,0.8);
     }
-    a:hover {
+    li:hover a {
+      color: #fff;
       text-decoration: underline;
     }
+    a {
+      color: #eee;
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-decoration: none;
+      flex-grow: 1;
+    }
+    /* File icons */
+    .icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* PDF icon */
+    .pdf-icon {
+      background: #e53e3e;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(229,62,62,0.6);
+      color: white;
+      font-weight: bold;
+      font-size: 1.4rem;
+      user-select: none;
+      font-family: monospace;
+      padding-top: 3px;
+    }
+    /* DOCX icon */
+    .docx-icon {
+      background: #3182ce;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(49,130,206,0.6);
+      color: white;
+      font-weight: bold;
+      font-size: 1.4rem;
+      user-select: none;
+      font-family: monospace;
+      padding-top: 3px;
+    }
+
     /* Responsive */
-    @media(max-width: 480px) {
-      .container {
-        padding: 25px 20px;
-      }
+    @media (max-width: 480px) {
       h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+      }
+      li {
+        font-size: 1rem;
+        padding: 14px 18px;
       }
       a {
         font-size: 1rem;
+      }
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+      .pdf-icon, .docx-icon {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -84,12 +129,30 @@
   <div class="container">
     <h1>📚 My Study Notes</h1>
     <ul>
-      <li><a href="ADLD LAB.pdf" target="_blank">ADLD LAB.pdf</a></li>
-      <li><a href="DB Practice test1 (1).pdf" target="_blank">DB Practice test1 (1).pdf</a></li>
-      <li><a href="Ex3_SQL_Constraints.pdf" target="_blank">Ex3_SQL_Constraints.pdf</a></li>
-      <li><a href="II AI&DS SQL LAB MANUAL (1).pdf" target="_blank">II AI&DS SQL LAB MANUAL (1).pdf</a></li>
-      <li><a href="ex4_SQL.pdf" target="_blank">ex4_SQL.pdf</a></li>
-      <li><a href="lab mannual (1) (1).docx" target="_blank">lab mannual (1) (1).docx</a></li>
+      <li>
+        <div class="icon pdf-icon">PDF</div>
+        <a href="ADLD LAB.pdf" target="_blank" title="ADLD LAB.pdf">ADLD LAB.pdf</a>
+      </li>
+      <li>
+        <div class="icon pdf-icon">PDF</div>
+        <a href="DB Practice test1 (1).pdf" target="_blank" title="DB Practice test1 (1).pdf">DB Practice test1 (1).pdf</a>
+      </li>
+      <li>
+        <div class="icon pdf-icon">PDF</div>
+        <a href="Ex3_SQL_Constraints.pdf" target="_blank" title="Ex3_SQL_Constraints.pdf">Ex3_SQL_Constraints.pdf</a>
+      </li>
+      <li>
+        <div class="icon pdf-icon">PDF</div>
+        <a href="II AI&DS SQL LAB MANUAL (1).pdf" target="_blank" title="II AI&DS SQL LAB MANUAL (1).pdf">II AI&DS SQL LAB MANUAL (1).pdf</a>
+      </li>
+      <li>
+        <div class="icon pdf-icon">PDF</div>
+        <a href="ex4_SQL.pdf" target="_blank" title="ex4_SQL.pdf">ex4_SQL.pdf</a>
+      </li>
+      <li>
+        <div class="icon docx-icon">DOCX</div>
+        <a href="lab mannual (1) (1).docx" target="_blank" title="lab mannual (1) (1).docx">lab mannual (1) (1).docx</a>
+      </li>
     </ul>
   </div>
 </body>
