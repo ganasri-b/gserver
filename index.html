@@ -2,45 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Study Notes</title>
   <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 40px 50px;
       max-width: 600px;
-      margin: 30px auto;
-      padding: 10px;
-      background: #f9f9f9;
+      width: 90%;
     }
     h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
       text-align: center;
-      color: #333;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
     ul {
-      list-style-type: none;
-      padding-left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
     li {
-      margin: 10px 0;
-      font-size: 18px;
+      background: rgba(255, 255, 255, 0.15);
+      margin-bottom: 15px;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+      padding: 15px 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    li:hover {
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
     }
     a {
+      color: #fff;
       text-decoration: none;
-      color: #007bff;
+      font-size: 1.2rem;
+      display: block;
     }
     a:hover {
       text-decoration: underline;
     }
+    /* Responsive */
+    @media(max-width: 480px) {
+      .container {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>My Study Notes</h1>
-  <ul>
-    <li><a href="ADLD LAB.pdf" target="_blank">ADLD LAB.pdf</a></li>
-    <li><a href="DB Practice test1 (1).pdf" target="_blank">DB Practice test1 (1).pdf</a></li>
-    <li><a href="Ex3_SQL_Constraints.pdf" target="_blank">Ex3_SQL_Constraints.pdf</a></li>
-    <li><a href="II AI&DS SQL LAB MANUAL (1).pdf" target="_blank">II AI&DS SQL LAB MANUAL (1).pdf</a></li>
-    <li><a href="ex4_SQL.pdf" target="_blank">ex4_SQL.pdf</a></li>
-    <li><a href="lab mannual (1) (1).docx" target="_blank">lab mannual (1) (1).docx</a></li>
-  </ul>
+  <div class="container">
+    <h1>📚 My Study Notes</h1>
+    <ul>
+      <li><a href="ADLD LAB.pdf" target="_blank">ADLD LAB.pdf</a></li>
+      <li><a href="DB Practice test1 (1).pdf" target="_blank">DB Practice test1 (1).pdf</a></li>
+      <li><a href="Ex3_SQL_Constraints.pdf" target="_blank">Ex3_SQL_Constraints.pdf</a></li>
+      <li><a href="II AI&DS SQL LAB MANUAL (1).pdf" target="_blank">II AI&DS SQL LAB MANUAL (1).pdf</a></li>
+      <li><a href="ex4_SQL.pdf" target="_blank">ex4_SQL.pdf</a></li>
+      <li><a href="lab mannual (1) (1).docx" target="_blank">lab mannual (1) (1).docx</a></li>
+    </ul>
+  </div>
 </body>
 </html>
